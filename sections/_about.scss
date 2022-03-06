@@ -1,0 +1,94 @@
+@import "./mixin";
+.about {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: var(--mainMargin-top);
+  .forAbout {
+    flex-basis: 90%;
+    h2 {
+      text-align: center;
+      position: relative;
+      font-size: 40px;
+      margin-bottom: 60px;
+      padding-bottom: 20px;
+      font-weight: 600;
+      text-transform: capitalize;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 3px;
+        background-color: black;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+      &::after {
+        content: "who we are";
+        position: absolute;
+        left: 50%;
+        bottom: -8px;
+        font-size: 20px;
+        color: #ff6161;
+        background-color: white;
+        padding: 0px 5px;
+        width: 120px;
+        transform: translateX(-50%);
+      }
+    }
+    .imgTextAbout {
+      display: flex;
+      justify-content: center;
+      height: 70vh;
+      align-items: center;
+      .imgAbout {
+        flex-basis: 35%;
+        img {
+          width: 600px;
+          height: 450px;
+          border-radius: 6px;
+          object-fit: cover;
+        }
+      }
+      .textAbout {
+        flex-basis: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10px;
+        h4 {
+          font-size: 25px;
+          font-weight: 600;
+          margin-bottom: 20px;
+          span {
+            color: #ff6161;
+          }
+        }
+        p {
+          font-size: 20px;
+          text-align: justify;
+          margin-bottom: 20px;
+        }
+        button {
+          color: black;
+          border: 2px solid #ff6161;
+          &:hover {
+            color: #ff6161;
+            border-color: black;
+          }
+          a {
+            transition: 0.7s;
+
+            &:hover {
+            }
+          }
+        }
+        #involve {
+          display: none;
+        }
+      }
+    }
+  }
+}

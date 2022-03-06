@@ -1,0 +1,90 @@
+@import "./mixin";
+.skills {
+  background-color: #fafafa;
+  padding: 15px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  .all-Skills {
+    flex-basis: 90%;
+    margin-top: var(--mainMargin-top);
+    margin-bottom: var((--mainMargin-botton));
+    h2 {
+      text-align: center;
+      position: relative;
+      font-size: 40px;
+      margin-bottom: 60px;
+      padding-bottom: 20px;
+      font-weight: 600;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 180px;
+        height: 3px;
+        background-color: black;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+      }
+
+      &::after {
+        content: "My Skills is";
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        font-size: 20px;
+        color: #ff6161;
+        background-color: #fafafa;
+        padding: 0px 5px;
+        transform: translateX(-50%);
+      }
+      p {
+        max-width: 70%;
+        margin-left: 5%;
+        line-height: 1.5;
+      }
+    }
+    .boxs {
+      display: flex;
+      justify-content: center;
+      .box {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid white;
+        border-radius: 7px;
+        flex-basis: 30%;
+        min-height: 200px;
+        margin: 5px;
+        transition: 0.5s;
+        &:hover {
+          border: 2px solid black;
+          box-shadow: 0px 0px 10px #ddd inset;
+        }
+        i {
+          color: #ff6161;
+        }
+        &:hover i {
+          transition: 1s;
+          transform: rotate(360deg);
+        }
+
+        i {
+          font-size: 40px;
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+        h3 {
+          font-size: 25px;
+          text-transform: capitalize;
+          color: black;
+        }
+        p {
+          max-width: 80%;
+          line-height: 1.3;
+        }
+      }
+    }
+  }
+}

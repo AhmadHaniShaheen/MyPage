@@ -1,0 +1,36 @@
+@import "./mixin";
+button {
+  font-family: cursive;
+  padding: 10px 30px;
+  margin: 20px 0;
+  display: inline-block;
+  font-size: 25px;
+  text-decoration: none;
+  border: 2px solid white;
+  transition: all 0.5s ease;
+  width: 220px;
+  color: white;
+  @include border-radius();
+  background: none;
+  font-weight: bold;
+  a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    transition: all 0.5s ease;
+  }
+
+  &:hover {
+    opacity: 0.8;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+    cursor: pointer;
+  }
+  &:hover a {
+    opacity: 0.8;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
